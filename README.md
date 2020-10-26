@@ -9,7 +9,7 @@
 ## Part 2: Coding Challenge - Expanding the Online Tea Shop
 * You will be expanding your previously-started online tea ordering application.
 * Add functionality for a user on the app to place an order: 
-1. Refactor the teas index view to include a single-input form with a submit button _below each tea selection_ where a user can enter their name.
+1. Refactor the teas index view to include a single-input form with a submit button _below each tea selection_ where a user can enter their name. Have this form make a post request to `/orders`.
 2. Create a model, table, and controller for an `order` model. An order will have an attribute of `name` (the person who placed the order) and will have a `tea` associated with it.
 3. Again, refactor the teas index view submit form to include an input field for not only the name data, but also the tea data. (What type of input field could you use to pass information you want to be hidden in the view?)
 4. Create a route `post /orders` in the orders controller that will be responsible for handling the request when a user submits the form. This route should create a new order in the db with the tea and person's name. Then it should redirect to a new route in the orders controller, `get /success`.
