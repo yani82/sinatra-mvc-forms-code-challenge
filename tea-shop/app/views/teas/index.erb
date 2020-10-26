@@ -1,0 +1,6 @@
+<h1>Teas available on <%=Date.today%></h1>
+
+<% @teas.each do |tea| %>
+    <h3><%=tea.name%></h3>
+    <p>$<%="%0.2f" % [tea.price]%></p>
+<% end %>
