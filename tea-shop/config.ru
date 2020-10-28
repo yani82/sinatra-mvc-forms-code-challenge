@@ -6,3 +6,4 @@ end
 
 run ApplicationController
 use TeasController
+use OrdersController

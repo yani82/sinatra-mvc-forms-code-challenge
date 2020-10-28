@@ -3,4 +3,11 @@
 <% @teas.each do |tea| %>
     <h3><%=tea.name%></h3>
     <p>$<%="%0.2f" % [tea.price]%></p>
+    <form method="post" action="/orders">
+    <p> <label for="name"> Name: </label>
+    <input type="text" id="name" name="name"> </p>
+    <input type="hidden" name="tea_id" value="<%= tea.id %>">
+    
+    <p><input type="submit" value="submit"></p>
+</form>
 <% end %>
